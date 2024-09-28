@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+# 数据源
+spring:
+  datasource:
+    username: root
+    password: ai710109
+    url: jdbc:mysql://192.168.162.111:3306/xuanyuan?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+
+logging:
+  level:
+    root: info
+    cn.yuanyang: debug
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+  # mp 默认的mapper.xml路径地址是classpath*:/mapper/**/*.xml  ,如果不是需要通过以下配置设置
+  mapper-locations: classpath:/mapper/*.xml
+
